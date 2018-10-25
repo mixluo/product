@@ -7,8 +7,16 @@ spring:
         enabled: true
         service-id: CONFIG
       profile: dev
+  zipkin:
+    base-url: http://192.168.40.128:9411
+  sleuth:
+    sampler:
+      probability: 1
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8763/eureka/
+logging:
+  level:
+    org.springframework.cloud.openfeign: debug
 
